@@ -1,0 +1,5 @@
+@media (max-width:500px) {
+    .navbar__list-item button {
+        width: 70px !important;
+    }
+}

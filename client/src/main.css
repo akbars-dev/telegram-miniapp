@@ -1,0 +1,115 @@
+@import "responsive.css";
+
+:root {
+	--destructive_text_color: #E53935;
+	--link_color: var(--tg-theme-link-color, #57a7e0);
+	--color_blue_alpha: rgba(53, 155, 233, .2);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wrapper {
+	background-color: var(--tg-theme-bg-color);
+	color: var(--tg-theme-hint-color);
+	margin: 0;
+	padding: 0;
+	height: var(--tg-viewport-height);
+	position: relative;
+}
+
+.container {
+	max-width: 560px;
+	margin: auto;
+	height: 75%;
+}
+
+/* .content {
+	padding-bottom: 50px;
+} */
+
+.header {
+	max-width: 560px !important;
+	position: relative;
+	height: 100%;
+}
+
+.header .navbar {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	left: 0;
+	padding: 10px;
+	width: 100%;
+}
+
+.navbar__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar__list-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+
+}
+
+.navbar__list-item button {
+	width: 98px;
+	max-width: 98px;
+	position: relative;
+	border: none;
+	background: transparent;
+	border-radius: 16px;
+	height: 32px;
+	cursor: pointer;
+}
+
+
+
+.navbar__list-item button:active .icon48 {
+	transform: scale(0.8);
+}
+
+.navbar__list-item button.active {
+	background-color: var(--color_blue_alpha);
+}
+
+.navbar__list-item span {
+	font-size: 12px;
+	color: var(--tg-theme-hint-color);
+}
+
+.navbar__list-item span.active {
+	color: var(--link_color);
+}
+
+.navbar__list-item button .icon48 {
+	width: 40px;
+	transition: .2s;
+}
+
+.navbar__list-item button.active .icon24 {
+	fill: var(--link_color);
+}
+
+
+.navbar__list-item button .prise {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	width: 16px;
+	height: 16px;
+	background-color: var(--destructive_text_color);
+	border-radius: 50%;
+	border: 1px solid var(--tg-theme-section-bg-color, var(--section_bg_color));
+	content: "";
+}
